@@ -6,3 +6,18 @@
 body{
     font-family: sans-serif;
 }
+.list-section{
+    background-color: rgb(236, 233, 233);
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 30px;
+}
+ul{
+    list-style-type: none;
+}
+.main-list li{
+    border-bottom: 1px solid gray;
+}
+.strikeWord{
+    text-decoration: line-through;
+}
