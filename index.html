@@ -14,11 +14,15 @@
 <body>
     <div id="root">
         <div class="container mx-auto">
+           
+           
             <div class="head-wrapper text-center mt-5 mb-5">
                 <h1>La tua TODO list!</h1>
-                <input type="text" class="form-control">
-                <button class="mt-3 p-2 btn btn-outline-success">Aggiungi</button>
+                <input v-model="newTask" type="text" class="form-control" placeholder="Cosa hai intenzione di fare oggi?">
+                <button @click="add" class="mt-3 p-2 btn btn-outline-success">Aggiungi</button>
             </div>
+           
+           
             <div class="list-section ">
                 <ul class="main-list">
                     <li v-for='(task , i) in tasks'class="d-flex justify-content-between">
@@ -28,7 +32,7 @@
                         <span v-else-if="!task.done">
                             {{task.name}}
                         </span>
-                        <i class="bi bi-trash"></i>
+                        <i @click="remove(i)" class="bi bi-trash"></i>
                     </li>
                     
                 </ul>

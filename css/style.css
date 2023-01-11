@@ -21,3 +21,6 @@ ul{
 .strikeWord{
     text-decoration: line-through;
 }
+.bi{
+    cursor: pointer;
+}
